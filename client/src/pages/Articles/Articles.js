@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "./../../utils/API";
-
+import Card from '../../components/Card'
 class Articles extends Component {
   state = {
     articles: [],
@@ -11,24 +11,32 @@ class Articles extends Component {
 
 
   componentDidMount() {
-
     this.loadArticles();
   }
 
   loadArticles = () => {
     API.getArticles()
-      .then(res =>
-        this.setState({ articles: res.data, title: "", img: "", p: "" })
-      )
+      .then(res => {
+        this.setState({ articles: res.data })        
+      })
       .catch(err => console.log(err));
-      console.log(this.state.articles)
+      
   }
 
   render() {
+    console.log(this.state.articles)
     return (
       <div>
-        <h1>{this.state.title}</h1>
-        <img src={this.state.img} alt="" />
+        {this.state.articles.map(article => {
+          return (
+            <Card key={article._id}
+              _id={article._id}
+              title={article.title}
+              p={article.p}
+              img={article.img}
+              />
+          )
+        })}
       </div>
     )
   }
