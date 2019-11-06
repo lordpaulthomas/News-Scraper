@@ -6,7 +6,7 @@ class Card extends Component {
 
   deleteArticle = id => {
     API.deleteArticle(id)
-      .then(res => this.loadArticles())
+      .then(res => this.props.loadArticles())
       .catch(err => console.log(err));
   }
 

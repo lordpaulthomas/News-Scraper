@@ -34,6 +34,7 @@ class Articles extends Component {
               title={article.title}
               p={article.p}
               img={article.img}
+              loadArticles={this.loadArticles}
               />
           )
         })}
