@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const articleSchema = new Schema({
+const savedSchema = new Schema({
   title: { type: String, required: true },
   img: { type: String, required: true },
   p: { type: String, required: true }
 });
 
-const Article = mongoose.model("Article", articleSchema)
+const Saved = mongoose.model("Saved", savedSchema)
 
-module.exports = Article;
+module.exports = Saved;

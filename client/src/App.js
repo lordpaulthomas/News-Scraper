@@ -10,7 +10,6 @@ function App() {
       <Switch>
         <Route exact path='/' component={Articles} />
         <Route exact Path='/saved' component={Saved} />
-        <Route component={Articles} />
       </Switch>
     </Router>
   );

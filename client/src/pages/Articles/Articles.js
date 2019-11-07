@@ -33,7 +33,7 @@ class Articles extends Component {
     console.log(this.state.articles)
     return (
       <div>
-        <Nav />
+        <Nav loadArticles={this.loadArticles}/>
         <Header title="Mongo Scraper"/>
         {this.state.articles.map(article => {
           return (

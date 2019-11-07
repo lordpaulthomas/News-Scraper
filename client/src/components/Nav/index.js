@@ -2,36 +2,31 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import API from "./../../utils/API"
 import './style.css'
-import Scrape from './../../utils/Scrape'
+import axios from 'axios'
 
 
 class Nav extends Component {
 
-  loadArticles = () => {
-    API.getArticles()
-      .then(res => {
-        this.setState({ articles: res.data })
-      })
-      .catch(err => console.log(err));
-
-  }
-
   deleteAll = () => {
     API.deleteAllArticles()
-      .then(res => this.loadArticles())
-      .catch(err => console.log(err))
+      .then(res => {
+        this.props.loadArticles()
+      })
+      .catch(err => console.log(err));
   }
 
   scrapeArticles = () => {
-    console.log("hello")
     API.scrapeArticles()
-      .then(res => this.loadArticles())
+      .then(res => {
+        this.props.loadArticles()
+      })
       .catch(err => console.log(err))
   }
 
 
 
   render() {
+    console.log("nav props", this.props)
     return (
       <div className="bg-dark">
         <ul className="nav nav-tabs">
