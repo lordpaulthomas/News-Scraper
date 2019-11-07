@@ -31,5 +31,11 @@ module.exports = {
     .then(dbModel => dbModel.remove())
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err))
+  },
+  deleteAll: function(req, res){
+    db.Article
+      .deleteMany({_id: "5dc3a0793012396305e42e57"})
+      .then(dbModel => dbModel.remove())
+      .catch(err => res.status(422).json(err))
   }
 }

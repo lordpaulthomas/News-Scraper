@@ -1,7 +1,8 @@
 import React from "react"
 import './style.css'
+import { PromiseProvider } from "mongoose"
 
-const Header = () => {
+const Header = props => {
   return (
     <div>
       <div className="card bg-dark text-white">
@@ -9,7 +10,7 @@ const Header = () => {
           className="card-img"
           alt="" />
         <div className="card-img-overlay" id="title">
-          <h1 className="card-title">Mango Scraper</h1>
+          <h1 className="card-title">{props.title}</h1>
           <h4 className="card-text">Coin Desk Edition</h4>
         </div>
       </div>

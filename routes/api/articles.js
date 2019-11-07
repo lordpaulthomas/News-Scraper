@@ -4,6 +4,7 @@ const articlesController = require("../../controllers/articlesController");
 router.route("/")
   .get(articlesController.findAll)
   .post(articlesController.create)
+  .delete(articlesController.deleteAll)
   
 router  
   .route("/:id")
