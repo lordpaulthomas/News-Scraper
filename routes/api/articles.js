@@ -9,7 +9,7 @@ router.route("/")
 router  
   .route("/:id")
   .get(articlesController.findById)
-  .put(articlesController.update)
+  .post(articlesController.saveArticle)
   .delete(articlesController.remove);
   
 module.exports = router;

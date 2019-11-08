@@ -23,15 +23,12 @@ class Nav extends Component {
       .catch(err => console.log(err))
   }
 
-
-
   render() {
     console.log("nav props", this.props)
     return (
       <div className="bg-dark">
         <ul className="nav nav-tabs">
           <h1 id="nav" className="ml-3 mr-3 text-light"> Mongo Scraper</h1>
-
           <li className="nav-item">
             <Link
               to="/"
@@ -46,7 +43,6 @@ class Nav extends Component {
               Saved
             </Link>
           </li>
-
           <button onClick={this.scrapeArticles} className="btn btn-outline-info">Scrape</button>
           <button onClick={this.deleteAll} className="btn btn-outline-info">Clear</button>
         </ul>

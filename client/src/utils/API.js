@@ -12,5 +12,10 @@ export default {
   },
   scrapeArticles: function() {
     return axios.get('/scrape')
+  },
+  saveArticle: function(id, savedArticle) {
+    console.log("props",id, savedArticle)
+    return axios.post('/saved/' + id, {body: savedArticle})
   }
+
 }

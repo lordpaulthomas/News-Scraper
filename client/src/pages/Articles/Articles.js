@@ -21,6 +21,8 @@ class Articles extends Component {
     this.loadArticles();
   }
 
+
+
   loadArticles = () => {
     API.getArticles()
       .then(res => {
