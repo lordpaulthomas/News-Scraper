@@ -14,7 +14,7 @@ router.use("/api", apiRoutes);
 router.route("/saved")
   .get(savedController.findAll)
   .post(savedController.create)
-  .delete(savedController.deleteAll)
+  .delete(savedController.remove)
 
 router.route("/saved/:id")
   .get(savedController.findById)

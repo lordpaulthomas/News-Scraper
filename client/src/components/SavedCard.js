@@ -4,29 +4,14 @@ import API from "./../utils/API";
 
 
 
-class Card extends Component {
+class SavedCard extends Component {
 
-  deleteArticle = id => {
-    API.deleteArticle(id)
+  deleteSavedArticle = id => {
+    API.deleteSavedArticle(id)
       .then(res => this.props.loadArticles())
       .catch(err => console.log(err));
   }
 
-  saveArticle = props => {
-    const savedArticle = {
-      title: props.title,
-      img: props.img,
-      p: props.p
-    }
-    API.saveArticle(props._id, savedArticle)
-      .then(res => {
-        this.deleteArticle(props._id)
-        this.props.loadArticles()
-      })
-      .then(this.deleteArticle(props._id))
-      .catch(err => console.log(err))
-
-  }
 
   render() {
     return (
@@ -43,10 +28,7 @@ class Card extends Component {
               </div>
               <div className="col-2">
                 <div className="row">
-                  <button onClick={() => this.saveArticle(this.props)} className="btn col-6 float-right btn-xs btn-success mt-4">Save</button>
-                </div>
-                <div className="row">
-                  <button onClick={() => this.deleteArticle(this.props._id)} className="btn col-6 float-right btn-xs btn-danger mt-1" >Remove</button>
+                  <button onClick={() => this.deleteSavedArticle(this.props._id)} className="btn col-6 float-right btn-xs btn-danger mt-1" >Remove</button>
                 </div>
               </div>
             </div>
@@ -56,4 +38,4 @@ class Card extends Component {
     )
   }
 }
-export default Card
+export default SavedCard

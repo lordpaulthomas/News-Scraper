@@ -32,7 +32,6 @@ class Articles extends Component {
   }
 
   render() {
-    console.log(this.state.articles)
     return (
       <div>
         <Nav loadArticles={this.loadArticles}/>

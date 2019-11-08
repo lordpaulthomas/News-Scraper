@@ -14,8 +14,13 @@ export default {
     return axios.get('/scrape')
   },
   saveArticle: function(id, savedArticle) {
-    console.log("props",id, savedArticle)
     return axios.post('/saved/' + id, {body: savedArticle})
+  },
+  getSavedArticles: function () {
+    return axios.get("/saved")
+  },
+  deleteSavedArticle: function (id) {
+    return axios.delete('/saved/'+ id)
   }
 
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import API from "./../../utils/API"
 import './style.css'
-import axios from 'axios'
+
 
 
 class Nav extends Component {
@@ -24,7 +24,6 @@ class Nav extends Component {
   }
 
   render() {
-    console.log("nav props", this.props)
     return (
       <div className="bg-dark">
         <ul className="nav nav-tabs">
