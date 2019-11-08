@@ -11,7 +11,7 @@ const cheerio = require('cheerio');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-if (process.env.PORT === "production") {
+if (process.env.NODE_ENV === "production") {
   app.use(expres.static("client/build"));
 }
 

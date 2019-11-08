@@ -39,7 +39,6 @@ router.get("/scrape", function (req, res) {
       if (result.title && result.img && result.p) {
         db.Article.create(result)
           .then(function (dbArticle) {
-            console.log(dbArticle);
           })
           .catch(function (err) {
             console.log(err);

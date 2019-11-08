@@ -14,17 +14,14 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function (req, res) {  
-    console.log(req.body.body)
-    const newThing = {
+    const savedArticle = {
       "p": req.body.body.p,
       "img": req.body.body.img,
       "title": req.body.body.title
     };
-    console.log(newThing)
-
-    db.Saved.create(newThing)
+    db.Saved.create(savedArticle)
       .then(function(dbSaved) {
-        console.log(dbSaved)
+        console.log("Successful Save")
       })
       .catch(function (err) {
         console.log(err)
