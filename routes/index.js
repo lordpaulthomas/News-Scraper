@@ -25,13 +25,13 @@ router.route("/saved/:id")
 router.get("/scrape", function (req, res) {
   axios.get("https://www.coindesk.com/").then(function (response) {
     var $ = cheerio.load(response.data);
-    $("a").each(function (i, element) {
+    $("section.article-card-fh").each(function (i, element) {
       var result = {};
       result.title = $(this)
-        .find("h3")
-        .text();
+        .find("a")
+        .text()
       result.img = $(this)
-        .find('img')
+        .find("img")
         .attr("src");
       result.p = $(this)
         .find('p')
