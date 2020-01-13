@@ -75,4 +75,8 @@ Node Dependencies:
  
   ```"react-router-dom": "^5.1.2"```
  
+<<<<<<< HEAD
   ```"react-scripts": "3.2.0"```
+=======
+  ```"react-scripts": "3.2.0"```
+>>>>>>> 192f47b33efa71150c69baf85f53915cd7f35d9d
