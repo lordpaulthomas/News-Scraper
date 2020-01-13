@@ -19,17 +19,11 @@ class SavedCard extends Component {
         <div className="container text-center m-2 shadow p-3 bg-white rounded" key={this.props._id}>
           <div className="card p-3">
             <div className="row ">
-              <div>
-                <img className="shadow" src={this.props.img} alt="" />
-              </div>
-              <div className="col-7">
-                <h3 className="mt-4">{this.props.title}</h3>
-                <p>{this.props.p}</p>
-              </div>
-              <div className="col-2">
-                <div className="row">
-                  <button onClick={() => this.deleteSavedArticle(this.props._id)} className="btn col-6 float-right btn-xs btn-danger mt-1" >Remove</button>
-                </div>
+              <img className="col-3" src={this.props.img} alt="" />
+              <div className="col-9">
+                <h3 className="row">{this.props.title}</h3>
+                <p className="row">{this.props.p}</p>
+                <button onClick={() => this.deleteSavedArticle(this.props._id)} className="btn col-6 float-right btn-xs btn-danger mt-1" >Remove</button>
               </div>
             </div>
           </div>
