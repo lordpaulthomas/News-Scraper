@@ -13,9 +13,66 @@ Description of App
 -----------
 
 
-News Scraper is a full stack application that scrapes the _www.Coin Desk.com_ website's news feed and displays it.  The user can save articles, which are displayed on the saved page.  News Scraper was built using the M.E.R.N. stack.
+News Scraper is a full stack application that scrapes _www.CoinDesk.com_'s top stories from thier news feed and displays it to the user.  Articles can then be saved or removed.  Saved articles appear on the save page located under the saved tab.  News Scraper was built using **Mongodb**, **Express.js**, **React.js**, **Node.js**.  Web Scraping performed with **Cheerio**.
 
-You can access News Scraper here:
-https://crypto-desk.herokuapp.com/
+Live demo: https://crypto-desk.herokuapp.com/
+
+To run app locally:
+--------
+1) From your **_command line interface_**,
+navigate to desired folder to store app.
+
+2) Clone repository to computer by entering:
+
+   ```git clone https://github.com/lordpaulthomas/News-Scraper.git```
+
+3) Navigate into cloned file:  
+
+   ```cd News-Scraper/``` 
+4) Install all server/client Node.js dependencies:
+   
+   ```  npm install``` 
+
+5) Start app on your computer 
+
+   ```  npm start``` 
+6) Open broswer of choice and navigate to http://localhost:3000
+
+
+
+**_Screen Shot of App_**
 
 ![database](./assets/screenShot.png)
+
+Node Dependencies:
+-----
+**Server Side**
+
+   ``` "axios": "^0.19.0"``` 
+
+   ```"body-parser": "^1.19.0"``` 
+
+   ```"cheerio": "^1.0.0-rc.3" ```
+
+   ```"cors": "^2.8.5" ```
+
+   ```"express": "^4.17.1" ```
+
+   ```"if-env": "^1.0.4"``` 
+
+   ```"mongojs": "^3.1.0"```
+    
+   ```"mongoose": "^5.7.7"``` 
+
+
+**Client Side**
+
+  ```"cors": "^2.8.5" ```
+
+  ```"react": "^16.11.0"```
+ 
+  ```"react-dom": "^16.11.0"```
+ 
+  ```"react-router-dom": "^5.1.2"```
+ 
+  ```"react-scripts": "3.2.0"```
