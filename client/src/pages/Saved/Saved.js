@@ -3,7 +3,7 @@ import API from "./../../utils/API";
 import Nav from './../../components/Nav';
 import Header from './../../components/Header';
 import Footer from './../../components/Footer';
-import SavedCard from "./../../components/SavedCard"
+import Card from "./../../components/Card"
 
 
 class Saved extends Component {
@@ -37,7 +37,7 @@ class Saved extends Component {
         <Header title="Saved Articles" />
         {this.state.articles.map(article => {
           return (
-            <SavedCard key={article._id}
+            <Card key={article._id}
               _id={article._id}
               title={article.title}
               p={article.p}
