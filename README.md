@@ -64,6 +64,7 @@ Node Dependencies:
     
    ```"mongoose": "^5.7.7"``` 
 
+   ```"serialize-javascript": "^2.1.2"```
 
 **Client Side**
 
