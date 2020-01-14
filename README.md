@@ -40,7 +40,7 @@ navigate to desired folder to store app.
 
 
 
-**_Screen Shot of App_**
+## **_Screen Shot of App_**
 
 ![database](./assets/screenShot.png)
 
