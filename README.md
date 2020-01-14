@@ -1,8 +1,8 @@
 # News-Scraper
 
-Licensing Information: READ LICENSE
+##### Licensing Information: READ LICENSE
 ---
-Project source can be downloaded from https://github.com/lordpaulthomas/clicky-game
+##### Project source can be downloaded from https://github.com/lordpaulthomas/clicky-game
 ----
 Author
 -----------
