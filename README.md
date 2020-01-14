@@ -22,7 +22,7 @@ To run app locally:
 1) From your **_command line interface_**,
 navigate to desired folder to store app.
 
-2) Clone repository to computer by entering:
+2) Clone repository to computer:
 
    ```git clone https://github.com/lordpaulthomas/News-Scraper.git```
 
@@ -36,7 +36,7 @@ navigate to desired folder to store app.
 5) Start app on your computer 
 
    ```  npm start``` 
-6) Open broswer of choice and navigate to http://localhost:3000
+6) Open browser and navigate to http://localhost:3000
 
 
 
