@@ -19,7 +19,7 @@ app.use(routes);
 
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/news-scraper", {
+  process.env.DB_URI || "mongodb://localhost/news-scraper", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
